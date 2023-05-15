@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izifin Email</title>
+    <style type="text/css">
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIFsdA.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin */
+        
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        
+        body {
+            margin: 0;
+            background-color: #E5E5E5;
+            ;
+        }
+        
+        table {
+            border-spacing: 0;
+        }
+        
+        td {
+            padding: 0;
+        }
+        
+        img {
+            border: 0;
+        }
+        
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            background: #E5E5E5;
+            ;
+        }
+        
+        .main {
+            width: 100%;
+            max-width: 744px;
+            background: #F9F9FA;
+            margin: 0 auto;
+            border-spacing: 0;
+            font-family: sans-serif;
+            padding: 0 54px 54px;
+        }
+        
+        .logo {
+            background-image: url("https://izifin-engagement-wallet.s3.us-east-2.amazonaws.com/email_templates/logo.png");
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+        .hero {
+            background-image: url("https://izifin-engagement-wallet.s3.us-east-2.amazonaws.com/email_templates/ie_app.jpg");
+            background-position: center;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 313px
+        }
+        
+        .hero2 {
+            background-image: url("https://izifin-engagement-wallet.s3.us-east-2.amazonaws.com/email_templates/ie_app.jpg");
+            background-position: center;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 313px;
+            margin-top: 41px;
+        }
+        
+        .yellow-container {
+            background: #FFF;
+            width: 100%;
+        }
+        
+        .h2 {
+            width: 100%;
+            font-family: 'IBM Plex Sans', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 42px;
+            /* identical to box height */
+            text-align: center;
+            color: #000000;
+        }
+        
+        .paragraph_wrapper {
+            max-width: 518px;
+            width: 90%;
+            margin-bottom: 30px;
+        }
+        
+        .paragraph {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #353535;
+            text-align: center;
+        }
+        
+        .link {
+            text-align: center;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #353535;
+            text-align: center;
+        }
+        
+        .bigbutton {
+            background: #009655;
+            height: 50px;
+            width: 350px;
+            font-family: 'IBM Plex Sans', Arial, sans-serif;
+            border-radius: 10px;
+            text-align: center;
+            border: none;
+            color: #fff;
+            margin-bottom: 41px;
+        }
+        
+        .two-columns {
+            text-align: center;
+            font-size: 0;
+            min-height: 100px;
+            width: 100%;
+        }
+        
+        .two-columns .column {
+            width: 100%;
+            max-width: 372px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        
+        .footer_text {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            /* identical to box height, or 114% */
+            text-align: center;
+            color: #060001;
+        }
+        
+        .three-columns {
+            text-align: center;
+            font-size: 0;
+            min-height: 50px;
+            width: 100%;
+        }
+        
+        .three-columns .column {
+            width: 100%;
+            max-width: 78px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        
+        .three-columns a {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 16px;
+            /* identical to box height, or 160% */
+            color: #858585;
+            text-decoration: none;
+        }
+        
+        .three-columns .column.footer_nav {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 16px;
+            /* identical to box height, or 160% */
+            color: #858585;
+        }
+        
+        .footer_notes {
+            max-width: 264px;
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 20px;
+            /* or 200% */
+            text-align: center;
+            color: #858585;
+        }
+    </style>
+</head>
+
+<body>
+    <center class="wrapper">
+        <table class="main" width="100%">
+
+
+
+
+            <!-- TOP BORDER -->
+            <tr>
+                <td>
+                    <table></table>
+                </td>
+            </tr>
+
+            <!-- LOGO SECTION -->
+            <tr>
+                <td>
+                    <table width="100%" height="100px" class="one-column">
+                        <tr>
+                            <td class="logo"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- H2 SECTION -->
+            <tr>
+                <td>
+                    <center>
+                        <table class="yellow-container">
+                            <tr>
+                                <td>
+                                    <table width="100%" class="one-column ">
+                                        <tr>
+                                            <td class="h2" style="height: 80px; line-height: 60px;">Welcome to [Eatry_Name]</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!-- PARAGRAPH SECTION -->
+                            <tr>
+                                <td>
+                                    <center>
+                                        <table class="paragraph_wrapper">
+                                            <tr>
+                                                <td class="paragraph">
+        
+                                                    <p>Dear [User_Name],</p>
+                                                    
+                                                    <p>Welcome to Eatery App, your go-to platform for discovering and exploring the best deals and rewards on [Eatry_Name] meals and also make payment from your wallet.
+                                                        We are thrilled to have you as part of our community!</p>
+                                                    
+                                                    <p>With Eatery App, you can:</p>
+                                                    
+                                                    <ul>
+                                                        <li>Browse a wide range of delectable dishes from our menu.</li>
+                                                        <li>Place orders for pickup or delivery, all within the app.</li>
+                                                        <li>Discover exclusive promotions. rewards and special offers.</li>
+                                                        <li>Stay updated on our latest events and culinary experiences.</li>
+                                                    </ul>
+                                                    
+                                                    <p>Whether you're craving a quick snack or planning a memorable dining experience, our team at [Eatery Name] is dedicated to serving you with exceptional food and impeccable service.</p>
+                                                    
+                                                    <p>Thank you for choosing [Eatery Name] and joining our app. We can't wait to treat your taste buds to a remarkable culinary journey!</p>
+                                                    
+                                                    <p>If you have any questions, suggestions, or need assistance with the app or our services, feel free to reach out to our support team at [Contact Email] or [Contact Phone Number].</p>
+                                                    
+                                                    <p>Enjoy exploring and indulging in the delicious offerings at [Eatery_Name]!</p>
+                                                    
+                                                    <p>Best regards,</p>
+                                                    
+                                                    <p>The [Eatery_Name] Team</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </center>
+                                </td>
+                            </tr>
+
+                            
+
+                        </table>
+                    </center>
+                </td>
+            </tr>
+
+
+
+
+            <!-- FOOTER SECTION -->
+
+            <!-- OPEN APP SECTION -->
+
+            <!-- FOOTER LOGO -->
+            <tr style="height: 60px">
+                <td>
+                    <center>
+                        <img src="https://izifin-engagement-wallet.s3.us-east-2.amazonaws.com/email_templates/logo.png" alt="Izifin" width="28" height="25" />
+                    </center>
+                </td>
+            </tr>
+            <tr>
+
+                <td class="footer_text">
+                    <center>
+                        © Izifin 2022, All rights reserved.
+                    </center>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <table class="three-columns">
+                        <tr>
+                            <td>
+                                <table class="column">
+                                    <tr>
+                                        <td class="footer_nav">
+                                            <a href=""> Privacy Policy  </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td class="footer_nav">
+                                            <a href=""> • &nbsp &nbsp Contact us </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td class="footer_nav">
+                                            <a href=""> • &nbsp &nbsp Read Our Blog</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+          
+            <tr>
+                <td class="footer_notes">
+                    <center>
+                        If you would prefer to no longer receive messages like this, you can
+                        <a href="">unsubscribe.</a>
+                    </center>
+                </td>
+            </tr>
+
+
+        </table>
+    </center>
+</body>
+
+</html>

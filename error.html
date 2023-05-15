@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izifin Email</title>
+    <style type="text/css">
+        @font-face {
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIFsdA.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin */
+        
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        
+        body {
+            margin: 0;
+            background-color: #E5E5E5;
+            ;
+        }
+        
+        table {
+            border-spacing: 0;
+        }
+        
+        td {
+            padding: 0;
+        }
+        
+        img {
+            border: 0;
+        }
+        
+        .wrapper {
+            width: 100%;
+            background: #ffffff;
+            table-layout: fixed;
+            background: #E5E5E5;
+            ;
+        }
+        
+        .main {
+            width: 100%;
+            max-width: 744px;
+            background: #fff;
+            margin: 0 auto;
+            border-spacing: 0;
+            font-family: sans-serif;
+            padding-bottom: 50px;
+        }
+        
+        .logo {
+            background-image: url("https://izifin-engagement-wallet.s3.us-east-2.amazonaws.com/email_templates/logo.png");
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+        .title {
+            /* font-family: 'IBM Plex Sans'; */
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+            /* identical to box height */
+            text-align: center;
+            color: #000000;
+            padding: 20px 0 10px
+        }
+        
+        .h2 {
+            height: 100px;
+            width: 100%;
+            font-family: 'IBM Plex Sans', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+            /* identical to box height */
+            text-align: center;
+        }
+        
+        .paragraph {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            /* or 150% */
+            color: #353535;
+            padding: 10px 0;
+            text-align: center;
+            padding: 19px 0;
+        }
+        
+        .bigbutton {
+            background: #009655;
+            height: 50px;
+            width: 90%;
+            font-family: 'IBM Plex Sans', Arial, sans-serif;
+            border-radius: 10px;
+            text-align: center;
+            border: none;
+            color: #fff;
+            max-width: 358px;
+        }
+        
+        .two-columns {
+            text-align: center;
+            font-size: 0;
+            min-height: 100px;
+            width: 100%;
+        }
+        
+        .two-columns .column {
+            width: 100%;
+            max-width: 372px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        
+        .yellow-container {
+            background: #FFFAEE;
+        }
+        
+        .yellow-container .inner {
+            width: 90%;
+            max-width: 518px;
+            padding: 32px 0 32px 0;
+        }
+        
+        .footer_text {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            /* identical to box height, or 114% */
+            text-align: center;
+            color: #060001;
+        }
+        
+        .three-columns {
+            text-align: center;
+            font-size: 0;
+            min-height: 50px;
+            width: 100%;
+        }
+        
+        .three-columns .column {
+            width: 100%;
+            max-width: 78px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        
+        .three-columns a {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 16px;
+            /* identical to box height, or 160% */
+            color: #858585;
+            text-decoration: none;
+        }
+        
+        .three-columns .column.footer_nav {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 16px;
+            /* identical to box height, or 160% */
+            color: #858585;
+        }
+        
+        .footer_notes {
+            max-width: 264px;
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 20px;
+            /* or 200% */
+            text-align: center;
+            color: #858585;
+        }
+    </style>
+</head>
+
+<body>
+    <center class="wrapper">
+        <table class="main" width="100%">
+
+
+
+
+            <!-- TOP BORDER -->
+            <tr>
+                <td>
+                    <table></table>
+                </td>
+            </tr>
+
+            <!-- LOGO SECTION -->
+            <tr>
+                <td>
+                    <table width="100%" height="100px" class="one-column">
+                        <tr>
+                            <td class="logo"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- YELLOW CONTAINER SECTION -->
+            <tr>
+                <td class="yellow-container">
+                    <center>
+                        <table class="inner">
+                            <!-- TOP IMAGE -->
+                            <tr>
+                                <td>
+                                    <center>
+                                        <img src="https://izifin-emailtemplates.s3.us-east-2.amazonaws.com/cancel.png" alt="error" width="103" height="103" />
+                                    </center>
+                                </td>
+                            </tr>
+                            <!-- TITLE -->
+                            <tr>
+                                <td class="title">Error Performing Action!</td>
+                            </tr>
+
+                            <!--PARAGRAPH TEXT 1 -->
+                            <tr>
+                                <td class="paragraph center-align">
+                                    You have begun the process to register a new device linked to your Settl.me account, please use the 6-digits code below to successfully complete the process.
+                                </td>
+                            </tr>
+                            <!--TOKEN -->
+                            <tr>
+                                <td>
+                                    <center>
+                                        <table style="width: 90%; max-width: 358px; height:56px">
+                                            <tr>
+                                                <td class="bigbutton">RETRY</td>
+                                            </tr>
+                                        </table>
+                                    </center>
+
+                                </td>
+                            </tr>
+                            <!--PARAGRAPH TEXT 2 -->
+                            <tr>
+                                <td class="paragraph center-align">
+                                    You can safely ignore this email If you didn’t request for an email verification.
+                                </td>
+                            </tr>
+
+                        </table>
+                    </center>
+                </td>
+            </tr>
+
+            <!-- FOOTER SECTION -->
+
+            <!-- OPEN APP SECTION -->
+
+            <tr>
+                <td>
+                    <center>
+                        <table class="two-columns" style="max-width: 250px; padding-top: 87px;">
+                            <tr>
+                                <td>
+                                    <table class="column" style="max-width: 125px;">
+                                        <tr>
+                                            <td class="">
+                                                <a href="">
+                                                    <img src="https://izifin-engagement-wallet.s3.us-east-2.amazonaws.com/email_templates/appstore.png" alt="appstore" width="121" height="36" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="column" style="max-width: 125px;">
+                                        <tr>
+                                            <td class="">
+                                                <a href="">
+                                                    <img src="https://izifin-engagement-wallet.s3.us-east-2.amazonaws.com/email_templates/googleplay.png" alt="play store" width="121" height="36" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                </td>
+            </tr>
+
+            <!-- FOOTER LOGO -->
+            <tr style="height: 60px">
+                <td>
+                    <center>
+                        <img src="https://izifin-engagement-wallet.s3.us-east-2.amazonaws.com/email_templates/logo.png" alt="Izifin" width="28" height="25" />
+                    </center>
+                </td>
+            </tr>
+            <tr>
+
+                <td class="footer_text">
+                    <center>
+                        © Izifin 2022, All rights reserved.
+                    </center>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <table class="three-columns">
+                        <tr>
+                            <td>
+                                <table class="column">
+                                    <tr>
+                                        <td class="footer_nav">
+                                            <a href=""> Privacy Policy  </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td class="footer_nav">
+                                            <a href=""> • &nbsp &nbsp Contact us </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="column">
+                                    <tr>
+                                        <td class="footer_nav">
+                                            <a href=""> • &nbsp &nbsp Read Our Blog</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center>
+                        <table class="two-columns social_icons" style="max-width: 40px; min-height:50px;">
+                            <tr>
+                                <td>
+                                    <table class="column" style="max-width: 20px; ">
+                                        <tr>
+                                            <td class="">
+                                                <a href="">
+                                                    <img src="https://izifin-emailtemplates.s3.us-east-2.amazonaws.com/twitter.png" alt="twitter" width="15" height="15" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="column" style="max-width: 20px;">
+                                        <tr>
+                                            <td class="">
+                                                <a href="">
+                                                    <img src="https://izifin-emailtemplates.s3.us-east-2.amazonaws.com/instagram.png" alt="instagram" width="15" height="15" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td class="footer_notes">
+                    <center>
+                        If you would prefer to no longer receive messages like this, you can
+                        <a href="">unsubscribe.</a>
+                    </center>
+                </td>
+            </tr>
+
+        </table>
+    </center>
+</body>
+
+</html>
